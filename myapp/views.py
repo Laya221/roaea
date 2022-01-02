@@ -9,7 +9,7 @@ import subprocess
 from django.http import FileResponse
 import os
 import time 
-import speech_recognition as sr
+#import speech_recognition as sr
 from nltk.stem.isri import ISRIStemmer
 import cv2
 def qr_to_path():
@@ -34,14 +34,8 @@ class static:
     result='No Thing'
     path=''
 def audio_search():
-    r = sr.Recognizer()
-    mic = sr.Microphone()
-    while(True):
-        with mic as source:
-            audio = r.listen(source)
-            time.sleep(1)
-            break
-    return r.recognize_google(audio)
+    
+    return 'laya'
 
 def laya_matching(data,query):
     def steming(data):
